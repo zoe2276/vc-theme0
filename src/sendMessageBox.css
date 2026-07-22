@@ -14,7 +14,7 @@
         background-color: rgba(50, 50, 50, 0.5);
         backdrop-filter: blur(var(--blur-radius)) !important;
 
-        transition: all calc(3.5 * var(--shadow-transition-delay));
+        transition: all calc(3.5 * var(--shadow-transition-delay)) !important;
 
         &:hover {
             background-color: rgba(70, 70, 70, 0.7);
@@ -27,7 +27,7 @@
                 var(--bs-inset-l)
             ;
             
-            transition: all var(--shadow-transition-delay);
+            transition: all var(--shadow-transition-delay) !important;
         }
 
         &:focus-within {
@@ -41,7 +41,7 @@
                 var(--bs-inset-l-h)
             ;
 
-            transition: all var(--shadow-transition-delay);
+            transition: all var(--shadow-transition-delay) !important;
         }
     }
 }

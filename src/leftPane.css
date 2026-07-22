@@ -1,6 +1,6 @@
 /* sidebar (channel/dms list) */
 .sidebar__5e434 {
-    background: rgb(0, 0, 0, var(--left-brightness));
+    background: rgb(0, 0, 0, var(--left-brightness)) !important;
 }
 
 .animatedContainer_f37cb1 {
@@ -24,7 +24,7 @@
 
 
 .wrapper_e131a9 {
-    background: var(--foreground);
+    background: var(--foreground) !important;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     border-bottom-left-radius: 0px;
@@ -47,9 +47,9 @@
 .panels__5e434,
 .guilds__5e434,
 .channelTextArea_f75fb0  {
-    border-radius: calc(var(--window-roundness) * 0.75);
+    border-radius: calc(var(--window-roundness) * 0.75) !important;
     backdrop-filter: blur(var(--blur-radius)) !important;
-    background: var(--inset-shadow-base) !important; /* rgba(50, 0, 50, var(--left-brightness)); */
+    background: var(--inset-shadow-base) !important; /* rgba(50, 0, 50, var(--left-brightness)) !important; */
 
     box-shadow: 
         var(--bs-inset-t),
@@ -67,7 +67,7 @@
     !important;
 }
 
-button[aria-label="Mute"] div.lottieIcon__5eb9b:not([style*="var(--icon-voice-muted);"]) {
+button[aria-label="Mute"] div.lottieIcon__5eb9b:not([style*="var(--icon-voice-muted) !important;"]) {
     animation: blink 1.33s infinite, unmuted-indicator 1.33s infinite !important;
 }
 

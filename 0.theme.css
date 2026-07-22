@@ -25,10 +25,10 @@
     --window-padding: 0.35rem;
     --window-roundness: 2rem;
 
-    --gradient-primary: rgb(from var(--inset-shadow-base) r g b / 0.5); /* DEFAULT: 103,58,183 */
+    --gradient-primary: rgb(from var(--inset-shadow-base) r g b / 0.5) !important; /* DEFAULT: 103,58,183 */
 	--gradient-secondary: rgba(90, 0, 90, 0.75); /* DEFAULT: 63,81,181 */
 	--gradient-direction: -15deg; /* DEFAULT: 320deg */
-    --gradient: linear-gradient(var(--gradient-direction), var(--gradient-primary), var(--gradient-secondary));
+    --gradient: linear-gradient(var(--gradient-direction), var(--gradient-primary), var(--gradient-secondary)) !important;
 
     --shadow-transition-delay: 233ms;
 
@@ -36,53 +36,53 @@
 
     --inset-shadow-base: rgba(35, 0, 35, 0.75);
     --inset-shadow-base-blur: 1rem;
-    --inset-shadow-base-spread: calc(-1 * var(--inset-shadow-base-blur)); /* DEFAULT: 0.15rem */
+    --inset-shadow-base-spread: calc(-1 * var(--inset-shadow-base-blur)) !important; /* DEFAULT: 0.15rem */
     --inset-shadow-base-offset: 1.25rem;
-    --inset-shadow-base-offset-n: calc(-1 * var(--inset-shadow-base-offset));
+    --inset-shadow-base-offset-n: calc(-1 * var(--inset-shadow-base-offset)) !important;
     --inset-shadow-h: rgba(45, 0, 45, 1);
     --inset-shadow-h-blur: 0.8rem;
-    --inset-shadow-h-spread: calc(-1 * var(--inset-shadow-h-blur)); /* DEFAULT: 0.225rem */
+    --inset-shadow-h-spread: calc(-1 * var(--inset-shadow-h-blur)) !important; /* DEFAULT: 0.225rem */
     --inset-shadow-h-offset: 1rem;
-    --inset-shadow-h-offset-n: calc(-1 * var(--inset-shadow-h-offset));
+    --inset-shadow-h-offset-n: calc(-1 * var(--inset-shadow-h-offset)) !important;
 
     --shadow-base: rgba(0, 0, 0, 0.25);
     --shadow-base-blur: 0.4rem;
-    --shadow-base-spread: calc(-1 * var(--shadow-base-blur)); /* DEFAULT: 0.15rem */
+    --shadow-base-spread: calc(-1 * var(--shadow-base-blur)) !important; /* DEFAULT: 0.15rem */
     --shadow-base-offset: 0.5rem;
-    --shadow-base-offset-n: calc(-1 * var(--shadow-base-offset));
+    --shadow-base-offset-n: calc(-1 * var(--shadow-base-offset)) !important;
     --shadow-h: rgba(0, 0, 0, 0.2);
     --shadow-h-blur: 0.4rem;
-    --shadow-h-spread: calc(-1 * var(--shadow-h-blur)); /* DEFAULT: 0.25rem */
+    --shadow-h-spread: calc(-1 * var(--shadow-h-blur)) !important; /* DEFAULT: 0.25rem */
     --shadow-h-offset: 0.75rem;
-    --shadow-h-offset-n: calc(-1 * var(--shadow-h-offset));
+    --shadow-h-offset-n: calc(-1 * var(--shadow-h-offset)) !important;
 
     /* these are all shadow defs. adjust shadow colors, blurs, etc. using vars above */
 
-    --bs-inset-t: inset 0 var(--inset-shadow-base-offset) var(--inset-shadow-base-blur) var(--inset-shadow-base-spread) var(--inset-shadow-base);
-    --bs-inset-r: inset var(--inset-shadow-base-offset-n) 0 var(--inset-shadow-base-blur) var(--inset-shadow-base-spread) var(--inset-shadow-base);
-    --bs-inset-b: inset 0 var(--inset-shadow-base-offset-n) var(--inset-shadow-base-blur) var(--inset-shadow-base-spread) var(--inset-shadow-base);
-    --bs-inset-l: inset var(--inset-shadow-base-offset) 0 var(--inset-shadow-base-blur) var(--inset-shadow-base-spread) var(--inset-shadow-base);
-    --bs-inset-t-h: inset 0 var(--inset-shadow-h-offset) var(--inset-shadow-h-blur) var(--inset-shadow-h-spread) var(--inset-shadow-h);
-    --bs-inset-r-h: inset var(--inset-shadow-h-offset-n) 0 var(--inset-shadow-h-blur) var(--inset-shadow-h-spread) var(--inset-shadow-h);
-    --bs-inset-b-h: inset 0 var(--inset-shadow-h-offset-n) var(--inset-shadow-h-blur) var(--inset-shadow-h-spread) var(--inset-shadow-h);
-    --bs-inset-l-h: inset var(--inset-shadow-h-offset) 0 var(--inset-shadow-h-blur) var(--inset-shadow-h-spread) var(--inset-shadow-h);
+    --bs-inset-t: inset 0 var(--inset-shadow-base-offset) var(--inset-shadow-base-blur) var(--inset-shadow-base-spread) var(--inset-shadow-base) !important;
+    --bs-inset-r: inset var(--inset-shadow-base-offset-n) 0 var(--inset-shadow-base-blur) var(--inset-shadow-base-spread) var(--inset-shadow-base) !important;
+    --bs-inset-b: inset 0 var(--inset-shadow-base-offset-n) var(--inset-shadow-base-blur) var(--inset-shadow-base-spread) var(--inset-shadow-base) !important;
+    --bs-inset-l: inset var(--inset-shadow-base-offset) 0 var(--inset-shadow-base-blur) var(--inset-shadow-base-spread) var(--inset-shadow-base) !important;
+    --bs-inset-t-h: inset 0 var(--inset-shadow-h-offset) var(--inset-shadow-h-blur) var(--inset-shadow-h-spread) var(--inset-shadow-h) !important;
+    --bs-inset-r-h: inset var(--inset-shadow-h-offset-n) 0 var(--inset-shadow-h-blur) var(--inset-shadow-h-spread) var(--inset-shadow-h) !important;
+    --bs-inset-b-h: inset 0 var(--inset-shadow-h-offset-n) var(--inset-shadow-h-blur) var(--inset-shadow-h-spread) var(--inset-shadow-h) !important;
+    --bs-inset-l-h: inset var(--inset-shadow-h-offset) 0 var(--inset-shadow-h-blur) var(--inset-shadow-h-spread) var(--inset-shadow-h) !important;
 
-    --bs-tl: var(--shadow-base-offset-n) var(--shadow-base-offset-n) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base);
-    --bs-t: 0 var(--shadow-base-offset-n) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base);
-    --bs-tr: var(--shadow-base-offset) var(--shadow-base-offset-n) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base);
-    --bs-r: var(--shadow-base-offset) 0 var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base);
-    --bs-br: var(--shadow-base-offset) var(--shadow-base-offset) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base);
-    --bs-b: 0 var(--shadow-base-offset) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base);
-    --bs-bl: var(--shadow-base-offset-n) var(--shadow-base-offset) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base);
-    --bs-l: var(--shadow-base-offset-n) 0 var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base);
-    --bs-tl-h: var(--shadow-h-offset-n) var(--shadow-h-offset-n) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h);
-    --bs-t-h: 0 var(--shadow-h-offset) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h);
-    --bs-tr-h: var(--shadow-h-offset) var(--shadow-h-offset-n) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h);
-    --bs-r-h: var(--shadow-h-offset) 0 var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h);
-    --bs-br-h: var(--shadow-h-offset) var(--shadow-h-offset) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h);
-    --bs-b-h: 0 var(--shadow-h-offset) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h);
-    --bs-bl-h: var(--shadow-h-offset-n) var(--shadow-h-offset) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h);
-    --bs-l-h: var(--shadow-h-offset) 0 var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h);
+    --bs-tl: var(--shadow-base-offset-n) var(--shadow-base-offset-n) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base) !important;
+    --bs-t: 0 var(--shadow-base-offset-n) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base) !important;
+    --bs-tr: var(--shadow-base-offset) var(--shadow-base-offset-n) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base) !important;
+    --bs-r: var(--shadow-base-offset) 0 var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base) !important;
+    --bs-br: var(--shadow-base-offset) var(--shadow-base-offset) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base) !important;
+    --bs-b: 0 var(--shadow-base-offset) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base) !important;
+    --bs-bl: var(--shadow-base-offset-n) var(--shadow-base-offset) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base) !important;
+    --bs-l: var(--shadow-base-offset-n) 0 var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base) !important;
+    --bs-tl-h: var(--shadow-h-offset-n) var(--shadow-h-offset-n) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h) !important;
+    --bs-t-h: 0 var(--shadow-h-offset) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h) !important;
+    --bs-tr-h: var(--shadow-h-offset) var(--shadow-h-offset-n) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h) !important;
+    --bs-r-h: var(--shadow-h-offset) 0 var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h) !important;
+    --bs-br-h: var(--shadow-h-offset) var(--shadow-h-offset) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h) !important;
+    --bs-b-h: 0 var(--shadow-h-offset) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h) !important;
+    --bs-bl-h: var(--shadow-h-offset-n) var(--shadow-h-offset) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h) !important;
+    --bs-l-h: var(--shadow-h-offset) 0 var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h) !important;
     
     /*
      * message block size specs. laid out like follows:
@@ -111,18 +111,18 @@
     --mt-p-b: 0.4rem;
     --mt-p-l: 4.5rem;
     --mt-m-t: 1.3rem;
-    --mt-m-r: var(--m-m-r);
-    --mt-m-b: var(--m-m-b);
-    --mt-m-l: var(--m-m-l);
+    --mt-m-r: var(--m-m-r) !important;
+    --mt-m-b: var(--m-m-b) !important;
+    --mt-m-l: var(--m-m-l) !important;
 
     --mm-p-t: 0.4rem;
-    --mm-p-r: var(--m-p-r);
+    --mm-p-r: var(--m-p-r) !important;
     --mm-p-b: 0.4rem;
-    --mm-p-l: var(--m-p-l);
+    --mm-p-l: var(--m-p-l) !important;
     --mm-m-t: 0.25rem;
-    --mm-m-r: var(--m-m-r);
-    --mm-m-b: var(--m-m-b);
-    --mm-m-l: var(--m-m-l);
+    --mm-m-r: var(--m-m-r) !important;
+    --mm-m-b: var(--m-m-b) !important;
+    --mm-m-l: var(--m-m-l) !important;
 
     --mh-xf: 0.25rem;
 }

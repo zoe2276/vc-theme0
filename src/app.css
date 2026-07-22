@@ -7,13 +7,13 @@
 
 /* app */
 .layer__960e4 {
-    top: var(--window-padding);
-    right: var(--window-padding);
-    bottom: var(--window-padding);
-    left: var(--window-padding);
+    top: var(--window-padding) !important;
+    right: var(--window-padding) !important;
+    bottom: var(--window-padding) !important;
+    left: var(--window-padding) !important;
     padding-top: 0;
     overflow: hidden;
-    border-radius: var(--window-roundness);
+    border-radius: var(--window-roundness) !important;
 }
 
 ::-webkit-input-placeholder,
@@ -22,7 +22,7 @@ button,
 input,
 select,
 textarea {
-    font-family: var(--font-primary);
+    font-family: var(--font-primary) !important;
     text-transform: lowercase;
     letter-spacing: -0.1rem;
     word-spacing: 0.15rem;

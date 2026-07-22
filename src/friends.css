@@ -6,15 +6,15 @@
 }
 
 .tabBody__133bf {
-    background: rgba(0, 0, 0, var(--middle-brightness));
+    background: rgba(0, 0, 0, var(--middle-brightness)) !important;
 
     & .peopleList__5ec2f div[role="listitem"] {
         background: rgba(60, 60, 60, 0.6);
         backdrop-filter: blur(var(--blur-radius)) !important;
         margin: 0.6rem 0.5rem;
 
-        border-left: 0.1rem solid var(--inset-shadow-base);
-        border-right: 0.1rem solid var(--inset-shadow-base);
+        border-left: 0.1rem solid var(--inset-shadow-base) !important;
+        border-right: 0.1rem solid var(--inset-shadow-base) !important;
 
         box-shadow: 
             var(--bs-inset-t),
@@ -31,13 +31,13 @@
             var(--bs-l)
         !important;
 
-        transition: all var(--shadow-transition-delay);
+        transition: all var(--shadow-transition-delay) !important;
 
         &:hover {
             background: rgba(50, 50, 50, 0.5);
             backdrop-filter: blur(var(--blur-radius-h)) !important;
-            border-left: 0.1rem solid var(--inset-shadow-h);
-            border-right: 0.1rem solid var(--inset-shadow-h);
+            border-left: 0.1rem solid var(--inset-shadow-h) !important;
+            border-right: 0.1rem solid var(--inset-shadow-h) !important;
 
             margin-left: 0.4rem;
             margin-right: 0.4rem;
@@ -61,7 +61,7 @@
 }
 
 .nowPlayingColumn__133bf {
-    background: rgba(0, 0, 0, var(--right-brightness));
+    background: rgba(0, 0, 0, var(--right-brightness)) !important;
 
     & .itemCard__7e549,
     & .card__2eab1 {
@@ -69,8 +69,8 @@
         backdrop-filter: blur(var(--blur-radius)) !important;
         margin: 0.6rem 0.25rem;
 
-        border-left: 0.1rem solid var(--inset-shadow-base);
-        border-right: 0.1rem solid var(--inset-shadow-base);
+        border-left: 0.1rem solid var(--inset-shadow-base) !important;
+        border-right: 0.1rem solid var(--inset-shadow-base) !important;
 
         box-shadow: 
             var(--bs-inset-t),
@@ -87,13 +87,13 @@
             var(--bs-l)
         !important;
 
-        transition: all var(--shadow-transition-delay);
+        transition: all var(--shadow-transition-delay) !important;
 
         &.itemCard__7e549:hover {
             background: rgba(50, 50, 50, 0.5);
             backdrop-filter: blur(var(--blur-radius-h)) !important;
-            border-left: 0.1rem solid var(--inset-shadow-h);
-            border-right: 0.1rem solid var(--inset-shadow-h);
+            border-left: 0.1rem solid var(--inset-shadow-h) !important;
+            border-right: 0.1rem solid var(--inset-shadow-h) !important;
 
             margin-left: 0.15rem;
             margin-right: 0.15rem;

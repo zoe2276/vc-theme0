@@ -3,7 +3,7 @@
 
 .chat_f75fb0 {
     border: none;
-    background: rgb(0, 0, 0, var(--middle-brightness));
+    background: rgb(0, 0, 0, var(--middle-brightness)) !important;
 }
 
 .divider__5126c {
@@ -34,17 +34,17 @@
 .messageListItem__5126c:hover > .message__5126c {
     background: rgba(50, 50, 50, 0.5);
     backdrop-filter: blur(var(--blur-radius-h)) !important;
-    border-left: 0.1rem solid var(--inset-shadow-h);
-    border-right: 0.1rem solid var(--inset-shadow-h);
+    border-left: 0.1rem solid var(--inset-shadow-h) !important;
+    border-right: 0.1rem solid var(--inset-shadow-h) !important;
 
     margin-left: 1.05rem;
     margin-right: 0.35rem;
 
 
-    margin-top: calc(var(--mm-m-t) - var(--mh-xf));
-    margin-bottom: calc(var(--mm-m-b) - var(--mh-xf));
-    padding-top: calc(var(--mm-p-t) + var(--mh-xf));
-    padding-bottom: calc(var(--mm-p-b) + var(--mh-xf));
+    margin-top: calc(var(--mm-m-t) - var(--mh-xf)) !important;
+    margin-bottom: calc(var(--mm-m-b) - var(--mh-xf)) !important;
+    padding-top: calc(var(--mm-p-t) + var(--mh-xf)) !important;
+    padding-bottom: calc(var(--mm-p-b) + var(--mh-xf)) !important;
 
     box-shadow: 
         var(--bs-inset-t-h),
@@ -67,15 +67,15 @@
     & > .container_b7e1cb {
         padding-left: 0.45rem;
         padding-right: 0.15rem;
-        transition: all var(--shadow-transition-delay) ease-out;
-        /* transition: all var(--shadow-transition-delay) ease-in; */ /* i love this but i cant */
+        transition: all var(--shadow-transition-delay) ease-out !important;
+        /* transition: all var(--shadow-transition-delay) ease-in !important; */ /* i love this but i cant */
     }
 
     &.groupStart__5126c{
-        margin-top: calc(var(--mt-m-t) - var(--mh-xf));
-        margin-bottom: calc(var(--mt-m-b) - var(--mh-xf));
-        padding-top: calc(var(--mt-p-t) + var(--mh-xf));
-        padding-bottom: calc(var(--mt-p-b) + var(--mh-xf));
+        margin-top: calc(var(--mt-m-t) - var(--mh-xf)) !important;
+        margin-bottom: calc(var(--mt-m-b) - var(--mh-xf)) !important;
+        padding-top: calc(var(--mt-p-t) + var(--mh-xf)) !important;
+        padding-bottom: calc(var(--mt-p-b) + var(--mh-xf)) !important;
     }
 /*
     box-shadow: 
@@ -107,8 +107,8 @@
 .messageListItem__5126c:hover ~ .messageListItem__5126c > .message__5126c {
     background: rgba(50, 50, 50, 0.5);
     backdrop-filter: blur(var(--blur-radius-h)) !important;
-    border-left: 0.1rem solid var(--inset-shadow-h);
-    border-right: 0.1rem solid var(--inset-shadow-h);
+    border-left: 0.1rem solid var(--inset-shadow-h) !important;
+    border-right: 0.1rem solid var(--inset-shadow-h) !important;
 
     margin-left: 1.05rem;
     margin-right: 0.35rem;
@@ -117,7 +117,7 @@
     & > .container_b7e1cb {
         padding-left: 0.45rem;
         padding-right: 0.15rem;
-        transition: all var(--shadow-transition-delay) ease-in;
+        transition: all var(--shadow-transition-delay) ease-in !important;
     }
 
     box-shadow: 
@@ -148,8 +148,8 @@
     /* reset for following groups * /
     background: rgba(60, 60, 60, 0.6);
     backdrop-filter: blur(var(--blur-radius)) !important;
-    border-left: 0.1rem solid var(--inset-shadow-base);
-    border-right: 0.1rem solid var(--inset-shadow-base);
+    border-left: 0.1rem solid var(--inset-shadow-base) !important;
+    border-right: 0.1rem solid var(--inset-shadow-base) !important;
 
     margin-left: 1.5rem;
     margin-right: 0.5rem;
@@ -158,7 +158,7 @@
     & > .container_b7e1cb {
         padding-left: 0;
         padding-right: 0;
-        transition: all var(--shadow-transition-delay) ease-in;
+        transition: all var(--shadow-transition-delay) ease-in !important;
     }
 
     box-shadow: 
@@ -229,19 +229,19 @@
     background: rgba(60, 60, 60, 0.6);
     backdrop-filter: blur(var(--blur-radius)) !important;
 
-    border-left: 0.1rem solid var(--inset-shadow-base);
-    border-right: 0.1rem solid var(--inset-shadow-base);
+    border-left: 0.1rem solid var(--inset-shadow-base) !important;
+    border-right: 0.1rem solid var(--inset-shadow-base) !important;
     border-radius: 0.5rem;
 
-    margin-top: var(--m-m-t);
-    margin-right: var(--m-m-r);
-    margin-bottom: var(--m-m-b);
-    margin-left: var(--m-m-l);
+    margin-top: var(--m-m-t) !important;
+    margin-right: var(--m-m-r) !important;
+    margin-bottom: var(--m-m-b) !important;
+    margin-left: var(--m-m-l) !important;
 
-    padding-top: var(--m-p-t);
-    padding-right: var(--m-p-r);
-    padding-bottom: var(--m-p-b);
-    padding-left: var(--m-p-l);
+    padding-top: var(--m-p-t) !important;
+    padding-right: var(--m-p-r) !important;
+    padding-bottom: var(--m-p-b) !important;
+    padding-left: var(--m-p-l) !important;
 
     box-shadow: 
         var(--bs-inset-t),
@@ -258,12 +258,12 @@
         var(--bs-l)
     ;
 
-    transition: all var(--shadow-transition-delay) ease-out;
+    transition: all var(--shadow-transition-delay) ease-out !important;
 
     & > .contents_c19a55,
     & > .container_b7e1cb {
-        transition: all var(--shadow-transition-delay) ease-out;
-        /* transition: all var(--shadow-transition-delay) ease-in; */ /* i love this but i cant */
+        transition: all var(--shadow-transition-delay) ease-out !important;
+        /* transition: all var(--shadow-transition-delay) ease-in !important; */ /* i love this but i cant */
     }
 
     &.mentioned__5126c {
@@ -274,7 +274,7 @@
             background: transparent;
             width: 0;
 
-            border: 0.125rem solid var(--icon-feedback-warning);
+            border: 0.125rem solid var(--icon-feedback-warning) !important;
             border-top-left-radius: 1.5rem;
             border-bottom-left-radius: 1.5rem;
         }
@@ -307,7 +307,7 @@
 
 .groupStart__5126c {
     /* always the top message in the stack */
-    border-top: 0.1rem solid var(--inset-shadow-base);
+    border-top: 0.1rem solid var(--inset-shadow-base) !important;
 /*
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
@@ -316,18 +316,18 @@
 */
 
 
-    margin-top: var(--mt-m-t);
-    margin-right: var(--mt-m-r);
-    margin-bottom: var(--mt-m-b);
-    margin-left: var(--mt-m-l);
+    margin-top: var(--mt-m-t) !important;
+    margin-right: var(--mt-m-r) !important;
+    margin-bottom: var(--mt-m-b) !important;
+    margin-left: var(--mt-m-l) !important;
 
-    padding-top: var(--mt-p-t);
-    padding-right: var(--mt-p-r);
-    padding-bottom: var(--mt-p-b);
-    padding-left: var(--mt-p-l);
+    padding-top: var(--mt-p-t) !important;
+    padding-right: var(--mt-p-r) !important;
+    padding-bottom: var(--mt-p-b) !important;
+    padding-left: var(--mt-p-l) !important;
 
     &:hover {
-        border-top: 0.1rem solid var(--inset-shadow-h);
+        border-top: 0.1rem solid var(--inset-shadow-h) !important;
     }
 }
 
@@ -341,14 +341,14 @@
 */
 
 
-    margin-top: var(--mm-m-t);
-    margin-right: var(--mm-m-r);
-    margin-bottom: var(--mm-m-b);
-    margin-left: var(--mm-m-l);
-    padding-top: var(--mm-p-t);
-    padding-right: var(--mm-p-r);
-    padding-bottom: var(--mm-p-b);
-    padding-left: var(--mm-p-l);
+    margin-top: var(--mm-m-t) !important;
+    margin-right: var(--mm-m-r) !important;
+    margin-bottom: var(--mm-m-b) !important;
+    margin-left: var(--mm-m-l) !important;
+    padding-top: var(--mm-p-t) !important;
+    padding-right: var(--mm-p-r) !important;
+    padding-bottom: var(--mm-p-b) !important;
+    padding-left: var(--mm-p-l) !important;
 }
 
 /*
@@ -359,7 +359,7 @@
     
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    border-bottom: 0.1rem solid var(--inset-shadow-base);
+    border-bottom: 0.1rem solid var(--inset-shadow-base) !important;
 
     padding-bottom: 0.4rem;
 
@@ -394,7 +394,7 @@
     }
 
     &:hover {
-        border-bottom: 0.1rem solid var(--inset-shadow-h);
+        border-bottom: 0.1rem solid var(--inset-shadow-h) !important;
     }
 }
 */
