@@ -1,0 +1,470 @@
+/* main chat panel */
+/* note: large comment blocks are for low-performant features */
+
+.chat_f75fb0 {
+    border: none;
+    background: rgb(0, 0, 0, var(--middle-brightness));
+}
+
+.divider__5126c {
+    border: none;
+
+    &.isUnread__908e2 {
+        border-top: 1px solid rgb(215, 58, 73);
+    }
+}
+
+.chatContent_f75fb0 {
+    background: transparent;
+}
+
+/* text shadow for usernames in chat */
+.username_c19a55.usernameColorOnName_c19a55 {
+    text-shadow: -1px 1px white;
+}
+/* text shadow for usernames in sidebar */
+.username__07f91 {
+    text-shadow: 
+        1px 0.5px rgb(from mediumorchid r g b / 0.7),
+        -1px -1px rgb(from mediumorchid r g b / 0.7)
+    ;
+    color: mistyrose !important;
+}
+
+.messageListItem__5126c:hover > .message__5126c {
+    background: rgba(50, 50, 50, 0.5);
+    backdrop-filter: blur(var(--blur-radius-h)) !important;
+    border-left: 0.1rem solid var(--inset-shadow-h);
+    border-right: 0.1rem solid var(--inset-shadow-h);
+
+    margin-left: 1.05rem;
+    margin-right: 0.35rem;
+
+
+    margin-top: calc(var(--mm-m-t) - var(--mh-xf));
+    margin-bottom: calc(var(--mm-m-b) - var(--mh-xf));
+    padding-top: calc(var(--mm-p-t) + var(--mh-xf));
+    padding-bottom: calc(var(--mm-p-b) + var(--mh-xf));
+
+    box-shadow: 
+        var(--bs-inset-t-h),
+        var(--bs-inset-r-h),
+        var(--bs-inset-b-h),
+        var(--bs-inset-l-h),
+        var(--bs-tl-h),
+        var(--bs-t-h),
+        var(--bs-tr-h),
+        var(--bs-r-h),
+        var(--bs-br-h),
+        var(--bs-b-h),
+        var(--bs-bl-h),
+        var(--bs-l-h)
+    ;
+
+    z-index: 100;
+
+    & > .contents_c19a55,
+    & > .container_b7e1cb {
+        padding-left: 0.45rem;
+        padding-right: 0.15rem;
+        transition: all var(--shadow-transition-delay) ease-out;
+        /* transition: all var(--shadow-transition-delay) ease-in; */ /* i love this but i cant */
+    }
+
+    &.groupStart__5126c{
+        margin-top: calc(var(--mt-m-t) - var(--mh-xf));
+        margin-bottom: calc(var(--mt-m-b) - var(--mh-xf));
+        padding-top: calc(var(--mt-p-t) + var(--mh-xf));
+        padding-bottom: calc(var(--mt-p-b) + var(--mh-xf));
+    }
+/*
+    box-shadow: 
+        var(--bs-inset-r-h),
+        var(--bs-inset-l-h),
+        var(--bs-r-h),
+        var(--bs-l-h)
+    ;
+
+    &.groupStart__5126c {
+        box-shadow: 
+            var(--bs-inset-t-h),
+            var(--bs-inset-r-h),
+            var(--bs-inset-l-h),
+            var(--bs-tl-h),
+            var(--bs-t-h),
+            var(--bs-tr-h),
+            var(--bs-r-h),
+            var(--bs-br-h),
+            var(--bs-bl-h),
+            var(--bs-l-h)
+        ;
+    }
+*/
+}
+
+/*
+.messageListItem__5126c:hover > .message__5126c,
+.messageListItem__5126c:hover ~ .messageListItem__5126c > .message__5126c {
+    background: rgba(50, 50, 50, 0.5);
+    backdrop-filter: blur(var(--blur-radius-h)) !important;
+    border-left: 0.1rem solid var(--inset-shadow-h);
+    border-right: 0.1rem solid var(--inset-shadow-h);
+
+    margin-left: 1.05rem;
+    margin-right: 0.35rem;
+
+    & > .contents_c19a55,
+    & > .container_b7e1cb {
+        padding-left: 0.45rem;
+        padding-right: 0.15rem;
+        transition: all var(--shadow-transition-delay) ease-in;
+    }
+
+    box-shadow: 
+        var(--bs-inset-r-h),
+        var(--bs-inset-l-h),
+        var(--bs-r-h),
+        var(--bs-l-h)
+    ;
+
+    &.groupStart__5126c {
+        box-shadow: 
+            var(--bs-inset-t-h),
+            var(--bs-inset-r-h),
+            var(--bs-inset-l-h),
+            var(--bs-tl-h),
+            var(--bs-t-h),
+            var(--bs-tr-h),
+            var(--bs-r-h),
+            var(--bs-br-h),
+            var(--bs-bl-h),
+            var(--bs-l-h)
+        ;
+    }
+}
+
+.messageListItem__5126c:hover ~ .messageListItem__5126c:has(> .groupStart__5126c) > .message__5126c,
+.messageListItem__5126c:hover ~ .messageListItem__5126c:has(> .groupStart__5126c) ~ .messageListItem__5126c > .message__5126c {
+    /* reset for following groups * /
+    background: rgba(60, 60, 60, 0.6);
+    backdrop-filter: blur(var(--blur-radius)) !important;
+    border-left: 0.1rem solid var(--inset-shadow-base);
+    border-right: 0.1rem solid var(--inset-shadow-base);
+
+    margin-left: 1.5rem;
+    margin-right: 0.5rem;
+
+    & > .contents_c19a55,
+    & > .container_b7e1cb {
+        padding-left: 0;
+        padding-right: 0;
+        transition: all var(--shadow-transition-delay) ease-in;
+    }
+
+    box-shadow: 
+        var(--bs-inset-r),
+        var(--bs-inset-l),
+        var(--bs-r),
+        var(--bs-l)
+    ;
+
+    &.groupStart__5126c {
+        box-shadow: 
+            var(--bs-inset-t),
+            var(--bs-inset-r),
+            var(--bs-inset-l),
+            var(--bs-tl),
+            var(--bs-t),
+            var(--bs-tr),
+            var(--bs-r),
+            var(--bs-br),
+            var(--bs-bl),
+            var(--bs-l)
+        ;
+    }
+}
+
+.messageListItem__5126c:hover ~ .messageListItem__5126c:has(+ .messageListItem__5126c > .groupStart__5126c) > .message__5126c,
+.messageListItem__5126c:hover:has(+ .divider__5126c) > .message__5126c,
+.messageListItem__5126c:hover ~ .messageListItem__5126c:not(:has(+ .messageListItem__5126c)) > .message__5126c {
+    /* reset for messages at end of groups * /
+    background: rgba(60, 60, 60, 0.6);
+    
+    box-shadow: 
+        var(--bs-inset-r),
+        var(--bs-inset-b),
+        var(--bs-inset-l),
+        var(--bs-r),
+        var(--bs-br),
+        var(--bs-b),
+        var(--bs-bl),
+        var(--bs-l)
+    !important;
+
+    &.groupStart__5126c {
+        padding-bottom: 0.8rem !important;
+
+        box-shadow: 
+            var(--bs-inset-t),
+            var(--bs-inset-r),
+            var(--bs-inset-b),
+            var(--bs-inset-l),
+            var(--bs-tl),
+            var(--bs-t),
+            var(--bs-tr),
+            var(--bs-r),
+            var(--bs-br),
+            var(--bs-b),
+            var(--bs-bl),
+            var(--bs-l)
+        !important;
+    }
+}
+*/
+
+.message__5126c {
+    /* common message settings */
+    /* background: transparent !important; */
+    text-transform: none !important;
+    background: rgba(60, 60, 60, 0.6);
+    backdrop-filter: blur(var(--blur-radius)) !important;
+
+    border-left: 0.1rem solid var(--inset-shadow-base);
+    border-right: 0.1rem solid var(--inset-shadow-base);
+    border-radius: 0.5rem;
+
+    margin-top: var(--m-m-t);
+    margin-right: var(--m-m-r);
+    margin-bottom: var(--m-m-b);
+    margin-left: var(--m-m-l);
+
+    padding-top: var(--m-p-t);
+    padding-right: var(--m-p-r);
+    padding-bottom: var(--m-p-b);
+    padding-left: var(--m-p-l);
+
+    box-shadow: 
+        var(--bs-inset-t),
+        var(--bs-inset-r),
+        var(--bs-inset-b),
+        var(--bs-inset-l),
+        var(--bs-tl),
+        var(--bs-t),
+        var(--bs-tr),
+        var(--bs-r),
+        var(--bs-br),
+        var(--bs-b),
+        var(--bs-bl),
+        var(--bs-l)
+    ;
+
+    transition: all var(--shadow-transition-delay) ease-out;
+
+    & > .contents_c19a55,
+    & > .container_b7e1cb {
+        transition: all var(--shadow-transition-delay) ease-out;
+        /* transition: all var(--shadow-transition-delay) ease-in; */ /* i love this but i cant */
+    }
+
+    &.mentioned__5126c {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        &:before {
+            background: transparent;
+            width: 0;
+
+            border: 0.125rem solid var(--icon-feedback-warning);
+            border-top-left-radius: 1.5rem;
+            border-bottom-left-radius: 1.5rem;
+        }
+    }
+
+/*
+    box-shadow: 
+        var(--bs-inset-r),
+        var(--bs-inset-l),
+        var(--bs-r),
+        var(--bs-l)
+    ;
+
+    &.groupStart__5126c {
+        box-shadow: 
+            var(--bs-inset-t),
+            var(--bs-inset-r),
+            var(--bs-inset-l),
+            var(--bs-tl),
+            var(--bs-t),
+            var(--bs-tr),
+            var(--bs-r),
+            var(--bs-br),
+            var(--bs-bl),
+            var(--bs-l)
+        ;
+    }
+*/
+}
+
+.groupStart__5126c {
+    /* always the top message in the stack */
+    border-top: 0.1rem solid var(--inset-shadow-base);
+/*
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+*/
+
+
+    margin-top: var(--mt-m-t);
+    margin-right: var(--mt-m-r);
+    margin-bottom: var(--mt-m-b);
+    margin-left: var(--mt-m-l);
+
+    padding-top: var(--mt-p-t);
+    padding-right: var(--mt-p-r);
+    padding-bottom: var(--mt-p-b);
+    padding-left: var(--mt-p-l);
+
+    &:hover {
+        border-top: 0.1rem solid var(--inset-shadow-h);
+    }
+}
+
+.message__5126c:not(.groupStart__5126c) {
+    /* middle messages */
+/*
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+*/
+
+
+    margin-top: var(--mm-m-t);
+    margin-right: var(--mm-m-r);
+    margin-bottom: var(--mm-m-b);
+    margin-left: var(--mm-m-l);
+    padding-top: var(--mm-p-t);
+    padding-right: var(--mm-p-r);
+    padding-bottom: var(--mm-p-b);
+    padding-left: var(--mm-p-l);
+}
+
+/*
+.messageListItem__5126c:has(+ .messageListItem__5126c > .groupStart__5126c) > .message__5126c,
+.messageListItem__5126c:has(+ .divider__5126c) > .message__5126c,
+.messageListItem__5126c:not(:has(+ .messageListItem__5126c)) > .message__5126c {
+    /* last message in group * /
+    
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom: 0.1rem solid var(--inset-shadow-base);
+
+    padding-bottom: 0.4rem;
+
+    box-shadow: 
+        var(--bs-inset-r),
+        var(--bs-inset-b),
+        var(--bs-inset-l),
+        var(--bs-r),
+        var(--bs-br),
+        var(--bs-b),
+        var(--bs-bl),
+        var(--bs-l)
+    ;
+
+    &.groupStart__5126c {
+        padding-bottom: 0.8rem;
+
+        box-shadow: 
+            var(--bs-inset-t),
+            var(--bs-inset-r),
+            var(--bs-inset-b),
+            var(--bs-inset-l),
+            var(--bs-tl),
+            var(--bs-t),
+            var(--bs-tr),
+            var(--bs-r),
+            var(--bs-br),
+            var(--bs-b),
+            var(--bs-bl),
+            var(--bs-l)
+        ;
+    }
+
+    &:hover {
+        border-bottom: 0.1rem solid var(--inset-shadow-h);
+    }
+}
+*/
+
+.chatGradient__36d07 {
+    display: none;
+}
+
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 85%;
+    }
+    50% {
+        opacity: 35%;
+    }
+}
+
+@keyframes from-me-x {
+    0% {
+        transform: translateX(1.5rem) scale(95%, 100%);
+        animation-timing-function: ease-in;
+        transform-origin: 100%;
+    }
+    100% {
+        transform: translateX(0px)
+    }
+}
+@keyframes from-me-y {
+    0% {
+        opacity: 0%;
+        transform: translateY(1.5rem);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+@keyframes from-others-x {
+    0% {
+        transform: translateX(-1.5rem) scale(95%, 100%);
+        animation-timing-function: ease-in;
+        transform-origin: 0%;
+    }
+    100% {
+        transform: translateX(0px)
+    }
+}
+@keyframes from-others-y {
+    0% {
+        opacity: 0%;
+        transform: translateY(-1.5rem);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+@keyframes from-same {
+    0% {
+        opacity: 0%;
+        transform: translateY(-100%);
+        z-index: -10;
+    }
+    99% {
+        z-index: 0;
+    }
+    100% {
+        
+    }
+}

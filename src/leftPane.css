@@ -1,0 +1,82 @@
+/* sidebar (channel/dms list) */
+.sidebar__5e434 {
+    background: rgb(0, 0, 0, var(--left-brightness));
+}
+
+.animatedContainer_f37cb1 {
+    -webkit-mask: linear-gradient(rgb(0, 0, 0, 0.9) 60%, rgb(0, 0, 0, 0) 100%) !important;
+    mask: linear-gradient(rgb(0, 0, 0, 0.9) 60%, rgb(0, 0, 0, 0) 100%) !important;
+    top: 48px;
+    background: transparent;
+}
+
+.header_f37cb1 {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+.container__2637a,
+.privateChannels_e6b769,
+.scroller__99e7c{
+    background: transparent;
+}
+
+
+.wrapper_e131a9 {
+    background: var(--foreground);
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.container_e131a9 {
+    border-bottom: none;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.containerDefault_c69b6d.selected_c69b6d .link__2ea32 {
+    background: var(--gradient) !important;
+    backdrop-filter: blur(2rem) !important;
+}
+
+.panels__5e434,
+.guilds__5e434,
+.channelTextArea_f75fb0  {
+    border-radius: calc(var(--window-roundness) * 0.75);
+    backdrop-filter: blur(var(--blur-radius)) !important;
+    background: var(--inset-shadow-base) !important; /* rgba(50, 0, 50, var(--left-brightness)); */
+
+    box-shadow: 
+        var(--bs-inset-t),
+        var(--bs-inset-r),
+        var(--bs-inset-b),
+        var(--bs-inset-l),
+        var(--bs-tl),
+        var(--bs-t),
+        var(--bs-tr),
+        var(--bs-r),
+        var(--bs-br),
+        var(--bs-b),
+        var(--bs-bl),
+        var(--bs-l)
+    !important;
+}
+
+button[aria-label="Mute"] div.lottieIcon__5eb9b:not([style*="var(--icon-voice-muted);"]) {
+    animation: blink 1.33s infinite, unmuted-indicator 1.33s infinite !important;
+}
+
+
+@keyframes unmuted-indicator {
+    0%, 100% {
+        color: mediumorchid;
+    }
+    50% {
+        color: unset;
+    }
+}

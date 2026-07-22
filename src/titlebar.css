@@ -1,0 +1,23 @@
+/* title bar */
+.title_f75fb0 {
+    background: transparent !important;
+
+    & .searchBar__97492 {
+        border: none;
+    }
+    
+    & .children__9293f::after {
+        content: none;
+    }
+}
+
+.subtitleContainer_f75fb0 {
+    margin-right: 8rem;
+}
+
+.trailing_c38106,
+.title_edbb22 {
+    position: relative;
+    top: 1.5rem;
+    z-index: 10;
+}

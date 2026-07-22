@@ -1,0 +1,33 @@
+/* fullscreen settings fix */
+@media (min-width:1600px) {
+    .modal_e44912 {
+        --custom-viewport-padding: 72px !important;
+    }
+}
+
+/* app */
+.layer__960e4 {
+    top: var(--window-padding);
+    right: var(--window-padding);
+    bottom: var(--window-padding);
+    left: var(--window-padding);
+    padding-top: 0;
+    overflow: hidden;
+    border-radius: var(--window-roundness);
+}
+
+::-webkit-input-placeholder,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: var(--font-primary);
+    text-transform: lowercase;
+    letter-spacing: -0.1rem;
+    word-spacing: 0.15rem;
+}
+
+[class*='circleIconButton'] {
+    display: none;
+}

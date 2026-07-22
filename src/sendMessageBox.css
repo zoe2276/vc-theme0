@@ -1,0 +1,54 @@
+.channelBottomBarArea_f75fb0 > .channelTextArea_f75fb0 {
+    background: transparent !important;
+
+    & > .stackedBars__74017 {
+        background: transparent;
+    }
+
+    & .textArea__74017 {
+        /* send message box */
+        text-transform: none !important;
+    }
+
+    & .scrollableContainer__74017 {
+        background-color: rgba(50, 50, 50, 0.5);
+        backdrop-filter: blur(var(--blur-radius)) !important;
+
+        transition: all calc(3.5 * var(--shadow-transition-delay));
+
+        &:hover {
+            background-color: rgba(70, 70, 70, 0.7);
+            backdrop-filter: blur(calc((var(--blur-radius) + var(--blur-radius-h)) / 2)) !important;
+
+            box-shadow: 
+                var(--bs-inset-t),
+                var(--bs-inset-r),
+                var(--bs-inset-b),
+                var(--bs-inset-l)
+            ;
+            
+            transition: all var(--shadow-transition-delay);
+        }
+
+        &:focus-within {
+            background-color: rgba(60, 60, 60, 0.6);
+            backdrop-filter: blur(var(--blur-radius-h)) !important;
+
+            box-shadow: 
+                var(--bs-inset-t-h),
+                var(--bs-inset-r-h),
+                var(--bs-inset-b-h),
+                var(--bs-inset-l-h)
+            ;
+
+            transition: all var(--shadow-transition-delay);
+        }
+    }
+}
+
+.formWithLoadedChatInput_f75fb0 {
+    & > *,
+    &::before {
+        background: transparent !important;
+    }
+}

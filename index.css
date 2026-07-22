@@ -1,0 +1,14 @@
+/* remote */
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&family=Agave&display=swap');
+@import url('https://raw.githubusercontent.com/zoe2276/fonts-i-like/refs/heads/main/Agave.css');
+
+/* loc */
+@import url("https://raw.githubusercontent.com/zoe2276/vc-theme0/refs/heads/main/src/app.css");
+@import url("https://raw.githubusercontent.com/zoe2276/vc-theme0/refs/heads/main/src/background.css");
+@import url("https://raw.githubusercontent.com/zoe2276/vc-theme0/refs/heads/main/src/chat.css");
+@import url("https://raw.githubusercontent.com/zoe2276/vc-theme0/refs/heads/main/src/friends.css");
+@import url("https://raw.githubusercontent.com/zoe2276/vc-theme0/refs/heads/main/src/leftPane.css");
+@import url("https://raw.githubusercontent.com/zoe2276/vc-theme0/refs/heads/main/src/rightPane.css");
+@import url("https://raw.githubusercontent.com/zoe2276/vc-theme0/refs/heads/main/src/sendMessageBox.css");
+@import url("https://raw.githubusercontent.com/zoe2276/vc-theme0/refs/heads/main/src/serverList.css");
+@import url("https://raw.githubusercontent.com/zoe2276/vc-theme0/refs/heads/main/src/titlebar.css");

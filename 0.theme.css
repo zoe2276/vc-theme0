@@ -1,0 +1,163 @@
+/* auto update */
+@import url("https://raw.githubusercontent.com/zoe2276/vc-theme0/refs/heads/main/index.css");
+
+/* base config options */
+:root {
+    --compact-title-bar: true;
+    --compact-server-list: true;
+    --custom-app-top-bar-height: 0;
+
+    --font-primary: "Agave" !important;
+    --font-display: "Syne Mono" !important;
+    --font-headline: "Syne Mono" !important;
+
+    --background-image: url("https://i.imgur.com/d3lHFfH.jpeg");
+    --background-image-blur: 0px;
+    --background-image-size: cover;
+    --background-image-position: center;
+
+    --serverlist-brightness: 0.7;
+    --left-brightness: 0.8;
+    --middle-brightness: 0.66;
+    --right-brightness: 0.3;
+    --overlay-brightness: 0.7;
+
+    --window-padding: 0.35rem;
+    --window-roundness: 2rem;
+
+    --gradient-primary: rgb(from var(--inset-shadow-base) r g b / 0.5); /* DEFAULT: 103,58,183 */
+	--gradient-secondary: rgba(90, 0, 90, 0.75); /* DEFAULT: 63,81,181 */
+	--gradient-direction: -15deg; /* DEFAULT: 320deg */
+    --gradient: linear-gradient(var(--gradient-direction), var(--gradient-primary), var(--gradient-secondary));
+
+    --shadow-transition-delay: 233ms;
+
+    /* shadow parts. base is for default behavior, h is for hover behavior. */
+
+    --inset-shadow-base: rgba(35, 0, 35, 0.75);
+    --inset-shadow-base-blur: 1rem;
+    --inset-shadow-base-spread: calc(-1 * var(--inset-shadow-base-blur)); /* DEFAULT: 0.15rem */
+    --inset-shadow-base-offset: 1.25rem;
+    --inset-shadow-base-offset-n: calc(-1 * var(--inset-shadow-base-offset));
+    --inset-shadow-h: rgba(45, 0, 45, 1);
+    --inset-shadow-h-blur: 0.8rem;
+    --inset-shadow-h-spread: calc(-1 * var(--inset-shadow-h-blur)); /* DEFAULT: 0.225rem */
+    --inset-shadow-h-offset: 1rem;
+    --inset-shadow-h-offset-n: calc(-1 * var(--inset-shadow-h-offset));
+
+    --shadow-base: rgba(0, 0, 0, 0.25);
+    --shadow-base-blur: 0.4rem;
+    --shadow-base-spread: calc(-1 * var(--shadow-base-blur)); /* DEFAULT: 0.15rem */
+    --shadow-base-offset: 0.5rem;
+    --shadow-base-offset-n: calc(-1 * var(--shadow-base-offset));
+    --shadow-h: rgba(0, 0, 0, 0.2);
+    --shadow-h-blur: 0.4rem;
+    --shadow-h-spread: calc(-1 * var(--shadow-h-blur)); /* DEFAULT: 0.25rem */
+    --shadow-h-offset: 0.75rem;
+    --shadow-h-offset-n: calc(-1 * var(--shadow-h-offset));
+
+    /* these are all shadow defs. adjust shadow colors, blurs, etc. using vars above */
+
+    --bs-inset-t: inset 0 var(--inset-shadow-base-offset) var(--inset-shadow-base-blur) var(--inset-shadow-base-spread) var(--inset-shadow-base);
+    --bs-inset-r: inset var(--inset-shadow-base-offset-n) 0 var(--inset-shadow-base-blur) var(--inset-shadow-base-spread) var(--inset-shadow-base);
+    --bs-inset-b: inset 0 var(--inset-shadow-base-offset-n) var(--inset-shadow-base-blur) var(--inset-shadow-base-spread) var(--inset-shadow-base);
+    --bs-inset-l: inset var(--inset-shadow-base-offset) 0 var(--inset-shadow-base-blur) var(--inset-shadow-base-spread) var(--inset-shadow-base);
+    --bs-inset-t-h: inset 0 var(--inset-shadow-h-offset) var(--inset-shadow-h-blur) var(--inset-shadow-h-spread) var(--inset-shadow-h);
+    --bs-inset-r-h: inset var(--inset-shadow-h-offset-n) 0 var(--inset-shadow-h-blur) var(--inset-shadow-h-spread) var(--inset-shadow-h);
+    --bs-inset-b-h: inset 0 var(--inset-shadow-h-offset-n) var(--inset-shadow-h-blur) var(--inset-shadow-h-spread) var(--inset-shadow-h);
+    --bs-inset-l-h: inset var(--inset-shadow-h-offset) 0 var(--inset-shadow-h-blur) var(--inset-shadow-h-spread) var(--inset-shadow-h);
+
+    --bs-tl: var(--shadow-base-offset-n) var(--shadow-base-offset-n) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base);
+    --bs-t: 0 var(--shadow-base-offset-n) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base);
+    --bs-tr: var(--shadow-base-offset) var(--shadow-base-offset-n) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base);
+    --bs-r: var(--shadow-base-offset) 0 var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base);
+    --bs-br: var(--shadow-base-offset) var(--shadow-base-offset) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base);
+    --bs-b: 0 var(--shadow-base-offset) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base);
+    --bs-bl: var(--shadow-base-offset-n) var(--shadow-base-offset) var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base);
+    --bs-l: var(--shadow-base-offset-n) 0 var(--shadow-base-blur) var(--shadow-base-spread) var(--shadow-base);
+    --bs-tl-h: var(--shadow-h-offset-n) var(--shadow-h-offset-n) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h);
+    --bs-t-h: 0 var(--shadow-h-offset) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h);
+    --bs-tr-h: var(--shadow-h-offset) var(--shadow-h-offset-n) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h);
+    --bs-r-h: var(--shadow-h-offset) 0 var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h);
+    --bs-br-h: var(--shadow-h-offset) var(--shadow-h-offset) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h);
+    --bs-b-h: 0 var(--shadow-h-offset) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h);
+    --bs-bl-h: var(--shadow-h-offset-n) var(--shadow-h-offset) var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h);
+    --bs-l-h: var(--shadow-h-offset) 0 var(--shadow-h-blur) var(--shadow-h-spread) var(--shadow-h);
+    
+    /*
+     * message block size specs. laid out like follows:
+     * --m-p-t = message-padding-top
+     * --m-m-r = message-margin-right
+     * --mt-p-l = messageTop(start of group)-padding-left
+     * --mm--m-b = messageMiddle(non-start of group)-margin-bottom
+     *
+     * xf = scale factor on hover
+    */
+
+    --blur-radius: 13px;
+    --blur-radius-h: 29px;
+
+    --m-p-t: 0.125rem;
+    --m-p-r: 1.5rem;
+    --m-p-b: 0.125rem;
+    --m-p-l: 4.5rem;
+    --m-m-t: 0rem;
+    --m-m-r: 0.5rem;
+    --m-m-b: 0rem;
+    --m-m-l: 1.5rem;
+
+    --mt-p-t: 0.8rem;
+    --mt-p-r: 4.5rem;
+    --mt-p-b: 0.4rem;
+    --mt-p-l: 4.5rem;
+    --mt-m-t: 1.3rem;
+    --mt-m-r: var(--m-m-r);
+    --mt-m-b: var(--m-m-b);
+    --mt-m-l: var(--m-m-l);
+
+    --mm-p-t: 0.4rem;
+    --mm-p-r: var(--m-p-r);
+    --mm-p-b: 0.4rem;
+    --mm-p-l: var(--m-p-l);
+    --mm-m-t: 0.25rem;
+    --mm-m-r: var(--m-m-r);
+    --mm-m-b: var(--m-m-b);
+    --mm-m-l: var(--m-m-l);
+
+    --mh-xf: 0.25rem;
+}
+
+/*
+ * IMPORTANT
+ * update the text in between "data-text~='<name>'"
+ * here and below with your username 
+*/
+.messageListItem__5126c:last-of-type:has(span[data-text~='bito']) {
+    /*
+        sending messages: selector effectively inverted to
+        override child selector
+    */
+    animation: blink 0.75s linear infinite !important;
+
+    /* messages from me */
+    &:not(:has(.isSending_c19a55)) {
+        animation: from-me-y 0.4s linear !important;
+        & > * {
+            animation: from-me-x 0.4s linear !important;
+        }
+    }
+
+}
+
+.messageListItem__5126c:last-of-type:has(h3.header_c19a55):not(:has(span[data-text~='bito'])) {
+    /* messages from others */
+    animation: from-others-y 0.4s linear;
+    & > * {
+        animation: from-others-x 0.4s linear;
+    }
+}
+
+.messageListItem__5126c:last-of-type:has(.timestampVisibleOnHover_c19a55) {
+    /* subsequent messages from anyone */
+    animation: from-same 0.4s linear;
+}
