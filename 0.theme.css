@@ -90,8 +90,6 @@
      * --m-m-r = message-margin-right
      * --mt-p-l = messageTop(start of group)-padding-left
      * --mm--m-b = messageMiddle(non-start of group)-margin-bottom
-     *
-     * xf = scale factor on hover
     */
 
     --blur-radius: 13px;
@@ -124,7 +122,7 @@
     --mm-m-b: var(--m-m-b) !important;
     --mm-m-l: var(--m-m-l) !important;
 
-    --mh-xf: 0.25rem;
+    --msg-hover-scale: 103%;
 
     /* misc */
     content-visibility: auto;
