@@ -139,7 +139,10 @@
         var(--bs-l)
     ;
 
-    transition: all var(--shadow-transition-delay) ease-out !important;
+    transition: 
+        all var(--shadow-transition-delay) ease-out, 
+        transform var(--shadow-transition-delay) cubic-bezier(0.25, 3, 1, 1) 
+    !important;
 
     & > .contents_c19a55,
     & > .container_b7e1cb {
