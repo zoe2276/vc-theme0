@@ -98,8 +98,6 @@
 
     & > .contents_c19a55,
     & > .container_b7e1cb {
-        padding-left: 0.45rem;
-        padding-right: 0.15rem;
         transition: all var(--shadow-transition-delay) ease-out !important;
         /* transition: all var(--shadow-transition-delay) ease-in !important; */ /* i love this but i cant */
     }
